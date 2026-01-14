@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ------------------------------
+   GLOBAL BASE STYLES
+-------------------------------- */
+@layer base {
+  body {
+    @apply antialiased text-slate-800;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply tracking-tight;
+  }
+}
+
+/* ------------------------------
+   GLASSMORPHISM UTILITIES
+-------------------------------- */
+@layer components {
+  /* Main glass container */
+  .glass {
+    @apply bg-white/60 backdrop-blur-xl border border-white/30
+           rounded-2xl shadow-lg shadow-indigo-100/50;
+  }
+
+  /* Smaller glass cards */
+  .glass-card {
+    @apply bg-white/60 backdrop-blur-xl border border-white/30
+           rounded-2xl shadow-md shadow-indigo-100/40;
+  }
+
+  /* Glass buttons (secondary actions) */
+  .glass-btn {
+    @apply bg-white/70 backdrop-blur border border-white/40
+           rounded-xl px-6 py-3 text-sm font-medium
+           transition hover:text-indigo-600;
+  }
+}
+
+/* ------------------------------
+   SCROLL OFFSET FIX (NAVBAR)
+-------------------------------- */
+section {
+  scroll-margin-top: 90px;
+}
