@@ -1,5 +1,6 @@
 import { useEffect, type ReactNode } from 'react';
 import Lenis from 'lenis';
+import 'lenis/dist/lenis.css';
 import { useReducedMotion } from '@shared/hooks';
 
 interface ProvidersProps {
@@ -18,14 +19,19 @@ export function Providers({ children }: ProvidersProps) {
       smoothWheel: true,
     });
 
+    let rafId: number;
+
     function raf(time: number) {
       lenis.raf(time);
-      requestAnimationFrame(raf);
+      rafId = requestAnimationFrame(raf);
     }
 
-    requestAnimationFrame(raf);
+    rafId = requestAnimationFrame(raf);
 
-    return () => lenis.destroy();
+    return () => {
+      lenis.destroy();
+      cancelAnimationFrame(rafId);
+    };
   }, [prefersReduced]);
 
   return <>{children}</>;
