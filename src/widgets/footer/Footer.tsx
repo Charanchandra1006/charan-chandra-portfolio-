@@ -1,6 +1,5 @@
 import { Mail, Heart } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from '@shared/ui/icons';
-import { GradientText } from '@shared/ui';
 import { navItems, socialLinks, siteConfig } from '@shared/constants';
 
 const socialIconMap: Record<string, React.FC<React.SVGProps<SVGSVGElement>>> = {
@@ -11,12 +10,12 @@ const socialIconMap: Record<string, React.FC<React.SVGProps<SVGSVGElement>>> = {
 
 export function Footer() {
   return (
-    <footer className="py-12 md:py-16 border-t border-glass-border">
+    <footer className="py-12 md:py-16 border-t border-[#27272a]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8 md:mb-12">
           <div>
-            <h3 className="text-xl font-bold mb-3">
-              <GradientText>{siteConfig.name}</GradientText>
+            <h3 className="text-xl font-bold mb-3 text-white">
+              {siteConfig.name}
             </h3>
             <p className="text-sm text-slate-500 leading-relaxed max-w-xs">
               Frontend Engineer crafting digital experiences with AI and modern web technologies.
@@ -40,7 +39,7 @@ export function Footer() {
               {socialLinks.map((link) => {
                 const Icon = socialIconMap[link.icon];
                 return (
-                  <a key={link.label} href={link.href} target={link.icon !== 'mail' ? '_blank' : undefined} rel={link.icon !== 'mail' ? 'noopener noreferrer' : undefined} className="w-10 h-10 rounded-xl bg-white/[0.03] border border-glass-border flex items-center justify-center text-slate-500 hover:text-accent-400 hover:border-accent-500/30 transition-all" aria-label={link.label}>
+                  <a key={link.label} href={link.href} target={link.icon !== 'mail' ? '_blank' : undefined} rel={link.icon !== 'mail' ? 'noopener noreferrer' : undefined} className="w-10 h-10 rounded-xl bg-white/[0.03] border border-[#27272a] flex items-center justify-center text-slate-500 hover:text-white hover:border-[#3f3f46] transition-all" aria-label={link.label}>
                     {Icon && <Icon width={16} height={16} />}
                   </a>
                 );
@@ -48,9 +47,9 @@ export function Footer() {
             </div>
           </div>
         </div>
-        <div className="border-t border-glass-border pt-6 md:pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+        <div className="border-t border-[#27272a] pt-6 md:pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
           <p className="text-xs text-slate-600">© {new Date().getFullYear()} {siteConfig.name} · All rights reserved.</p>
-          <p className="text-xs text-slate-600 flex items-center gap-1">Built with <Heart size={12} className="text-accent-500" /> using React + TypeScript</p>
+          <p className="text-xs text-slate-600 flex items-center gap-1">Built with <Heart size={12} className="text-white" /> using React + TypeScript</p>
         </div>
       </div>
     </footer>

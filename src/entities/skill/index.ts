@@ -1,33 +1,24 @@
-export interface SkillCategory {
-  id: string;
-  title: string;
-  icon: string;
-  skills: string[];
+import { Code2, Database, Terminal, Layers, Layout, Server, Box, GitBranch, Coffee, Paintbrush } from 'lucide-react';
+
+export interface Skill {
+  name: string;
+  icon: React.ElementType;
 }
 
-export const skillCategories: SkillCategory[] = [
-  {
-    id: 'frontend',
-    title: 'Frontend & UI',
-    icon: '⚡',
-    skills: ['React', 'Next.js', 'TypeScript', 'TailwindCSS', 'Three.js', 'Framer Motion', 'HTML/CSS', 'JavaScript'],
-  },
-  {
-    id: 'backend',
-    title: 'Backend & Database',
-    icon: '⚙️',
-    skills: ['Node.js', 'Express.js', 'FastAPI', 'Django', 'Flask', 'PostgreSQL', 'MySQL', 'MongoDB', 'Supabase', 'Prisma'],
-  },
-  {
-    id: 'ai-ml',
-    title: 'AI & Data Science',
-    icon: '🤖',
-    skills: ['Gemini API', 'Scikit-Learn', 'XGBoost', 'FinBERT', 'NumPy', 'Pandas', 'Matplotlib', 'DocTR OCR'],
-  },
-  {
-    id: 'cloud',
-    title: 'Cloud & DevOps',
-    icon: '☁️',
-    skills: ['Git & GitHub', 'Vercel', 'Render', 'Docker', 'REST APIs', 'CI/CD'],
-  },
+export const skillsList: Skill[] = [
+  { name: 'Java', icon: Coffee },
+  { name: 'Python', icon: Code2 },
+  { name: 'JavaScript', icon: Code2 },
+  { name: 'TypeScript', icon: Terminal },
+  { name: 'React', icon: Code2 },
+  { name: 'Next.js', icon: Layers },
+  { name: 'Node.js', icon: Server },
+  { name: 'Express', icon: Server },
+  { name: 'PostgreSQL', icon: Database },
+  { name: 'MongoDB', icon: Database },
+  { name: 'MySQL', icon: Database },
+  { name: 'Docker', icon: Box },
+  { name: 'Git', icon: GitBranch },
+  { name: 'Tailwind CSS', icon: Layout },
+  { name: 'Figma', icon: Paintbrush },
 ];

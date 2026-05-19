@@ -12,8 +12,8 @@ export function useCounter({ end, duration = 2000, start = 0, enabled = true }: 
 
   useEffect(() => {
     if (!enabled) {
-      setCount(start);
-      return;
+      const timeout = setTimeout(() => setCount(start), 0);
+      return () => clearTimeout(timeout);
     }
 
     let startTime: number | null = null;

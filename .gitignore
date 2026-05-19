@@ -46,3 +46,9 @@ Thumbs.db
 # Misc
 *.local
 .vercel
+*.tsbuildinfo
+.eslintcache
+.prettiercache
+.vite
+
+README.md

@@ -1,1 +1,0 @@
-export { GitHubStatsSection } from './GitHubStatsSection';

@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
-import { GradientText } from '@shared/ui';
 import { MagneticButton } from '@shared/ui';
 import { navItems, siteConfig } from '@shared/constants';
 import { cn } from '@shared/utils';
@@ -12,11 +11,11 @@ export function Navbar() {
   const isMobile = useIsMobile();
 
   return (
-    <nav className="fixed top-0 w-full z-50 glass" role="navigation" aria-label="Main navigation">
+    <nav className="fixed top-0 w-full z-50 bg-[#000000]/95 border-b border-[#27272a]" role="navigation" aria-label="Main navigation">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
         {/* Logo */}
-        <a href="#home" className="text-xl sm:text-2xl font-bold z-50">
-          <GradientText>Charan</GradientText>
+        <a href="#home" className="text-xl sm:text-2xl font-bold z-50 text-white">
+          Charan
         </a>
 
         {/* Desktop nav */}
@@ -43,7 +42,7 @@ export function Navbar() {
 
         {/* Mobile hamburger */}
         <button
-          className="md:hidden z-50 w-11 h-11 flex items-center justify-center rounded-xl glass"
+          className="md:hidden z-50 w-11 h-11 flex items-center justify-center rounded-xl bg-[#09090b] border border-[#27272a]"
           onClick={() => setIsOpen(!isOpen)}
           aria-label={isOpen ? 'Close menu' : 'Open menu'}
           aria-expanded={isOpen}
@@ -70,7 +69,7 @@ export function Navbar() {
             {/* Drawer */}
             <motion.div
               className={cn(
-                'absolute right-0 top-0 h-full w-72 bg-background-secondary border-l border-glass-border',
+                'absolute right-0 top-0 h-full w-72 bg-[#09090b] border-l border-[#27272a]',
                 'flex flex-col pt-24 px-6 gap-2'
               )}
               initial={{ x: '100%' }}
@@ -91,7 +90,7 @@ export function Navbar() {
                   {item.label}
                 </motion.a>
               ))}
-              <div className="mt-4 pt-4 border-t border-glass-border">
+              <div className="mt-4 pt-4 border-t border-[#27272a]">
                 <MagneticButton
                   href={siteConfig.resumeUrl}
                   target="_blank"
