@@ -4,7 +4,13 @@ import { skillsList } from '@entities/skill';
 export function SkillsSection() {
   return (
     <section id="skills" className="py-12">
-      <div className="max-w-4xl">
+      <motion.div
+        className="max-w-4xl"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: '-50px' }}
+        transition={{ duration: 0.5 }}
+      >
         <h2 className="text-xs uppercase tracking-widest text-text-secondary font-semibold mb-8">
           Skills & Technologies
         </h2>
@@ -27,7 +33,7 @@ export function SkillsSection() {
             );
           })}
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

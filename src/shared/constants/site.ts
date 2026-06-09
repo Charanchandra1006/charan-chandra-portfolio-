@@ -1,6 +1,6 @@
 export const siteConfig = {
   name: 'M Charan Chandra',
-  title: 'M Charan Chandra | Frontend Engineer · AI + Full Stack',
+  title: 'M Charan Chandra | Full-stack development',
   description:
     'Frontend Engineer specializing in AI-powered applications and full-stack development. Building cinematic digital experiences with React, TypeScript, and modern web technologies.',
   url: 'https://charanchandra.dev',

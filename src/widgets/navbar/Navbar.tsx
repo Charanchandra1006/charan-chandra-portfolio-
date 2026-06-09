@@ -14,8 +14,11 @@ export function Navbar() {
     <nav className="fixed top-0 w-full z-50 bg-[#000000]/95 border-b border-[#27272a]" role="navigation" aria-label="Main navigation">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
         {/* Logo */}
-        <a href="#home" className="text-xl sm:text-2xl font-bold z-50 text-white">
-          Charan
+        <a href="#home" className="flex items-center gap-2.5 z-50 group">
+          <div className="w-8 h-8 rounded-lg bg-[#09090b] border border-[#27272a] flex items-center justify-center group-hover:border-[#3f3f46] transition-colors">
+            <span className="text-white font-bold text-sm leading-none">C</span>
+          </div>
+          <span className="text-xl sm:text-2xl font-bold text-white">Charan</span>
         </a>
 
         {/* Desktop nav */}
