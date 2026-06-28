@@ -7,7 +7,7 @@ export const siteConfig = {
   email: 'charanchandra1006@gmail.com',
   location: 'Telangana, India',
   resumeUrl:
-    'https://drive.google.com/file/d/1crjvV77pSrVYGvb7PClWObbNGIOO7naa/view',
+    'https://drive.google.com/file/d/1OTaRNtwwRoX3v3Bylf_Y7JZDKaMhxAK3/view',
 } as const;
 
 export interface NavItem {
