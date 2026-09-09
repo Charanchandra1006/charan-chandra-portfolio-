@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Mail, ArrowRight } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "@shared/ui/icons";
 import { siteConfig, socialLinks } from "@shared/constants";
+import { BlackHole } from "../black-hole/BlackHole";
 
 const socialIconMap: Record<string, React.FC<React.SVGProps<SVGSVGElement>>> = {
   github: GithubIcon,
@@ -11,8 +12,10 @@ const socialIconMap: Record<string, React.FC<React.SVGProps<SVGSVGElement>>> = {
 
 export function HeroSection() {
   return (
-    <section className="flex flex-col justify-center min-h-[60vh] py-12">
-      <div className="max-w-4xl">
+    <section className="relative z-0 flex flex-col justify-center min-h-screen pt-24 pb-12 overflow-hidden">
+      <BlackHole />
+      <div className="relative z-10 w-full max-w-[1400px] mx-auto px-4 sm:px-6">
+        <div className="max-w-4xl">
         <motion.div 
           className="flex items-center gap-3 mb-8"
           initial={{ opacity: 0, y: 10 }}
@@ -39,10 +42,10 @@ export function HeroSection() {
         >
           Full-Stack Developer crafting beautiful, functional applications that blend modern web technologies with AI to create meaningful digital experiences.
         </motion.p>
-      </div>
+        </div>
 
-      <motion.div 
-        className="flex flex-wrap items-center gap-6"
+        <motion.div 
+          className="flex flex-wrap items-center gap-6 mt-12"
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.3 }}
@@ -72,7 +75,8 @@ export function HeroSection() {
             );
           })}
         </div>
-      </motion.div>
+        </motion.div>
+      </div>
     </section>
   );
 }

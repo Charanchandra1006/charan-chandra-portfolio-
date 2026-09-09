@@ -10,8 +10,8 @@ export default function HomePage() {
   return (
     <>
       <Navbar />
-      <main className="max-w-[1400px] mx-auto px-4 sm:px-6 py-24 md:py-32 flex flex-col gap-32">
-        <HeroSection />
+      <HeroSection />
+      <main className="max-w-[1400px] mx-auto px-4 sm:px-6 pb-24 md:pb-32 flex flex-col gap-32">
         <SkillsSection />
         <ProjectsSection />
         <ExperienceSection />
